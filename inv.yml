@@ -1,0 +1,13 @@
+---
+all:
+  children:
+    routers:
+      hosts:
+        # add Rx to file hosts
+        R1:
+        R2:
+    switches:
+      hosts:
+        # add SWx to file hosts
+        SW1:
+        SW2:

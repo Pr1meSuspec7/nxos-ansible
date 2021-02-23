@@ -1,0 +1,6 @@
+---
+### To run multiple playbooks
+- name: "Playbook_1"
+  import_playbook: 01_play_delete_prefix.yml
+#- name: "Playbook_2"
+#  import_playbook: another_playbook.yml

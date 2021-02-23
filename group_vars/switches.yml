@@ -1,0 +1,6 @@
+---
+ansible_network_os: "nxos"
+ansible_user: "ansible"
+ansible_password: "ansible"
+# enter your python path
+ansible_python_interpreter: "~/code/ansible/ansible-venv/bin/python"

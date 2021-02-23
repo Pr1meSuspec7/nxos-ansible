@@ -1,0 +1,22 @@
+---
+- name: "PLAY 1: MODIFY PREFIX-LIST OSPF"
+  hosts: switches
+  connection: network_cli
+  tasks:
+    - name: "TASK 1: delete seq"
+      nxos_config:
+        lines:
+          - "no ip prefix-list OSPF seq 735 permit 10.207.210.0/23"
+          - "no ip prefix-list OSPF seq 740 permit 10.207.212.0/23"
+          - "no ip prefix-list OSPF seq 745 permit 10.207.214.0/23"
+          - "no ip route 10.207.210.0/23 10.207.127.134"
+          - "no ip route 10.207.212.0/23 10.207.127.134"
+          - "no ip route 10.207.214.0/23 10.207.127.134"
+
+
+
+      register: cli_result
+
+    - name: "TASK 2: show command"
+      debug:
+        msg: "{{ cli_result.commands }}"
